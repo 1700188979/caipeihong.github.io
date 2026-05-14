@@ -12,6 +12,7 @@
             padding: 0;
             box-sizing: border-box;
         }
+
         body {
             font-family: 'Inter', sans-serif;
             background-color: #f9fafc;
@@ -19,11 +20,13 @@
             line-height: 1.5;
             scroll-behavior: smooth;
         }
+
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 24px;
         }
+
         /* 导航栏 */
         nav {
             background: rgba(255, 255, 255, 0.96);
@@ -34,12 +37,14 @@
             border-bottom: 1px solid #e5e7eb;
             padding: 16px 0;
         }
+
         .nav-container {
             display: flex;
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
         }
+
         .logo {
             font-weight: 700;
             font-size: 1.5rem;
@@ -48,20 +53,24 @@
             background-clip: text;
             color: transparent;
         }
+
         .nav-links {
             display: flex;
             gap: 2rem;
             list-style: none;
         }
+
         .nav-links a {
             text-decoration: none;
             font-weight: 500;
             color: #4b5563;
             transition: color 0.2s;
         }
+
         .nav-links a:hover {
             color: #2563eb;
         }
+
         .btn {
             display: inline-block;
             background-color: #2563eb;
@@ -74,18 +83,22 @@
             border: none;
             cursor: pointer;
         }
+
         .btn-outline {
             background: transparent;
             border: 1px solid #2563eb;
             color: #2563eb;
         }
+
         .btn-outline:hover {
             background: #2563eb;
             color: white;
         }
+
         .btn:hover {
             background-color: #1d4ed8;
         }
+
         .hero {
             padding: 80px 0 60px;
             display: flex;
@@ -94,33 +107,40 @@
             justify-content: space-between;
             gap: 40px;
         }
+
         .hero-content {
             flex: 1;
         }
+
         .hero-content h1 {
             font-size: 3rem;
             font-weight: 700;
             margin-bottom: 1rem;
             letter-spacing: -0.02em;
         }
+
         .hero-content .highlight {
             color: #2563eb;
         }
+
         .hero-content p {
             font-size: 1.2rem;
             color: #4b5563;
             margin: 1.5rem 0;
             max-width: 550px;
         }
+
         .hero-buttons {
             display: flex;
             gap: 1rem;
             flex-wrap: wrap;
         }
+
         .hero-avatar {
             flex: 0 0 260px;
             text-align: center;
         }
+
         .avatar-circle {
             width: 240px;
             height: 240px;
@@ -130,18 +150,21 @@
             align-items: center;
             justify-content: center;
             overflow: hidden;
-            box-shadow: 0 20px 25px -12px rgba(0,0,0,0.1);
+            box-shadow: 0 20px 25px -12px rgba(0, 0, 0, 0.1);
             margin: 0 auto;
         }
+
         .avatar-circle img {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
+
         section {
             padding: 64px 0;
             border-bottom: 1px solid #eef2f6;
         }
+
         .section-title {
             font-size: 2rem;
             font-weight: 700;
@@ -150,33 +173,39 @@
             border-left: 5px solid #2563eb;
             padding-left: 1rem;
         }
+
         .grid-2 {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 2rem;
         }
+
         .card {
             background: white;
             border-radius: 24px;
             padding: 1.5rem;
-            box-shadow: 0 4px 6px -2px rgba(0,0,0,0.05), 0 10px 15px -3px rgba(0,0,0,0.05);
+            box-shadow: 0 4px 6px -2px rgba(0, 0, 0, 0.05), 0 10px 15px -3px rgba(0, 0, 0, 0.05);
             transition: transform 0.2s, box-shadow 0.2s;
             border: 1px solid #edf2f7;
         }
+
         .card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 20px 25px -12px rgba(0,0,0,0.1);
+            box-shadow: 0 20px 25px -12px rgba(0, 0, 0, 0.1);
         }
+
         .card h3 {
             font-size: 1.4rem;
             margin-bottom: 0.5rem;
         }
+
         .card .project-tags {
             display: flex;
             flex-wrap: wrap;
             gap: 0.5rem;
             margin: 0.75rem 0;
         }
+
         .tag {
             background: #eef2ff;
             color: #1e40af;
@@ -185,6 +214,7 @@
             border-radius: 20px;
             font-weight: 500;
         }
+
         .media-placeholder {
             background: #f1f5f9;
             border-radius: 16px;
@@ -197,24 +227,29 @@
             font-size: 0.9rem;
             overflow: hidden;
         }
-        .media-placeholder img, .media-placeholder video {
+
+        .media-placeholder img,
+        .media-placeholder video {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
+
         /* 技术栈分类样式 */
         .skills-section {
             display: flex;
             flex-direction: column;
             gap: 2rem;
         }
+
         .skill-category {
             background: white;
             border-radius: 24px;
             padding: 1.5rem;
             border: 1px solid #edf2f7;
-            box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
         }
+
         .skill-category h3 {
             font-size: 1.25rem;
             font-weight: 600;
@@ -223,11 +258,13 @@
             border-left: 3px solid #2563eb;
             padding-left: 0.75rem;
         }
+
         .skill-badge-list {
             display: flex;
             flex-wrap: wrap;
             gap: 0.7rem;
         }
+
         .skill-badge {
             background: #f1f5f9;
             padding: 6px 14px;
@@ -237,45 +274,305 @@
             color: #1e293b;
             transition: all 0.2s;
         }
+
         .skill-badge:hover {
             background: #e2e8f0;
             transform: translateY(-1px);
         }
+
         /* 获奖荣誉列表 */
         .awards-list {
             display: flex;
             flex-direction: column;
             gap: 0.75rem;
         }
+
         .award-item {
             display: flex;
             align-items: baseline;
             gap: 12px;
             flex-wrap: wrap;
         }
+
         .award-name {
             font-weight: 600;
             min-width: 220px;
         }
-        /* 项目详情区域样式 */
+
+        /* ========== 项目详情区域样式（优化后：图文混排） ========== */
         .project-detail {
-            margin-bottom: 2.5rem;
-            scroll-margin-top: 80px;  /* 避免被固定导航栏遮挡 */
+            margin-bottom: 3rem;
+            scroll-margin-top: 80px;
+            background: white;
+            border-radius: 24px;
+            padding: 2rem;
+            border: 1px solid #edf2f7;
+            box-shadow: 0 4px 6px -2px rgba(0, 0, 0, 0.04), 0 10px 15px -3px rgba(0, 0, 0, 0.04);
+            transition: box-shadow 0.3s;
         }
+
+        .project-detail:hover {
+            box-shadow: 0 20px 25px -12px rgba(0, 0, 0, 0.1);
+        }
+
         .project-detail h3 {
-            font-size: 1.8rem;
-            margin-bottom: 1rem;
+            font-size: 1.7rem;
+            margin-bottom: 1.25rem;
             color: #0f172a;
+            padding-bottom: 0.75rem;
+            border-bottom: 2px solid #eef2f6;
         }
+
         .project-detail .detail-content {
+            display: flex;
+            gap: 2.5rem;
+            align-items: flex-start;
+            flex-wrap: wrap;
+        }
+
+        .project-detail .detail-text {
+            flex: 1 1 500px;
+            min-width: 280px;
+        }
+
+        .project-detail .detail-text p {
+            margin-bottom: 0.9rem;
+            color: #374151;
+            line-height: 1.7;
+        }
+
+        .project-detail .detail-text strong {
+            color: #1e293b;
+            font-weight: 600;
+        }
+
+        .project-detail .detail-images {
+            flex: 0 0 340px;
             display: flex;
             flex-direction: column;
             gap: 1rem;
+            min-width: 260px;
         }
+
+        .project-detail .detail-images .img-card {
+            background: #f8fafc;
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid #e5e7eb;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+            transition: transform 0.25s, box-shadow 0.25s;
+            aspect-ratio: 16 / 10;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .project-detail .detail-images .img-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .project-detail .detail-images .img-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .project-detail .detail-images .img-card .caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(15, 23, 42, 0.75);
+            color: #f1f5f9;
+            font-size: 0.8rem;
+            padding: 6px 12px;
+            text-align: center;
+            backdrop-filter: blur(4px);
+        }
+
         .back-link {
-            margin-top: 1rem;
+            margin-top: 1.25rem;
             display: inline-block;
+            color: #2563eb;
+            font-weight: 500;
+            text-decoration: none;
+            transition: color 0.2s;
+            font-size: 0.95rem;
         }
+
+        .back-link:hover {
+            color: #1d4ed8;
+            text-decoration: underline;
+        }
+
+        /* 学习历程时间线样式 */
+        .timeline {
+            position: relative;
+            padding-left: 2rem;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 8px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: #2563eb;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 2rem;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: -2rem;
+            top: 0.2rem;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #2563eb;
+            border: 2px solid white;
+            box-shadow: 0 0 0 2px #2563eb;
+        }
+
+        .timeline-date {
+            font-weight: 600;
+            color: #2563eb;
+            margin-bottom: 0.25rem;
+        }
+
+        .timeline-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-desc {
+            color: #4b5563;
+        }
+
+        /* ========== 联系方式区域样式 ========== */
+        .contact-card {
+            background: white;
+            border-radius: 2rem;
+            padding: 2.5rem;
+            text-align: center;
+            box-shadow: 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            border: 1px solid #edf2f7;
+        }
+
+        .contact-info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+            text-align: left;
+        }
+
+        .contact-info-item {
+            display: flex;
+            align-items: center;
+            gap: 0.85rem;
+            padding: 1rem 1.25rem;
+            background: #f8fafc;
+            border-radius: 16px;
+            transition: background 0.2s, transform 0.2s;
+            border: 1px solid #eef2f6;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .contact-info-item:hover {
+            background: #eef2ff;
+            transform: translateY(-2px);
+        }
+
+        .contact-info-item .contact-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            flex-shrink: 0;
+            color: white;
+        }
+
+        .contact-icon.email {
+            background: #ea580c;
+        }
+        .contact-icon.qq {
+            background: #12b7f5;
+        }
+        .contact-icon.wechat {
+            background: #07c160;
+        }
+        .contact-icon.github {
+            background: #1f2937;
+        }
+        .contact-icon.qr-wechat {
+            background: #07c160;
+            cursor: default;
+        }
+
+        .contact-info-item .contact-label {
+            font-size: 0.75rem;
+            color: #6b7280;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            font-weight: 500;
+        }
+
+        .contact-info-item .contact-value {
+            font-weight: 600;
+            color: #1e293b;
+            font-size: 0.95rem;
+            word-break: break-all;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #eef2f6;
+        }
+
+        .social-links a {
+            color: #4b5563;
+            font-size: 1.5rem;
+            margin: 0 8px;
+            transition: color 0.2s, transform 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            padding: 8px 16px;
+            border-radius: 30px;
+            background: #f1f5f9;
+        }
+
+        .social-links a:hover {
+            color: #2563eb;
+            transform: translateY(-2px);
+            background: #eef2ff;
+        }
+
+        .social-links a i {
+            font-size: 1.2rem;
+        }
+
         footer {
             background: #fff;
             padding: 32px 0;
@@ -283,33 +580,113 @@
             color: #6b7280;
             border-top: 1px solid #eef2f6;
         }
-        .social-links a {
-            color: #4b5563;
-            font-size: 1.5rem;
-            margin: 0 10px;
-            transition: color 0.2s;
+
+        footer .footer-contact {
+            margin-top: 0.5rem;
+            font-size: 0.85rem;
+            color: #9ca3af;
         }
-        .social-links a:hover {
-            color: #2563eb;
+
+        footer .footer-contact span {
+            margin: 0 0.75rem;
         }
+
+        /* ========== 响应式设计 ========== */
+        @media (max-width: 900px) {
+            .project-detail .detail-content {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+
+            .project-detail .detail-images {
+                flex: 1 1 auto;
+                width: 100%;
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap: 0.75rem;
+            }
+
+            .project-detail .detail-images .img-card {
+                flex: 1 1 200px;
+                aspect-ratio: 16 / 10;
+                min-width: 140px;
+            }
+
+            .contact-info-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 0.75rem;
+            }
+
+            .contact-info-item {
+                padding: 0.75rem 1rem;
+            }
+        }
+
         @media (max-width: 768px) {
             .hero {
                 flex-direction: column-reverse;
                 text-align: center;
                 padding: 40px 0;
             }
+
             .hero-content p {
                 margin-left: auto;
                 margin-right: auto;
             }
+
             .hero-buttons {
                 justify-content: center;
             }
+
             .nav-links {
                 gap: 1rem;
             }
+
             .section-title {
                 font-size: 1.6rem;
+            }
+
+            .timeline {
+                padding-left: 1rem;
+            }
+
+            .timeline-dot {
+                left: -1.2rem;
+            }
+
+            .project-detail {
+                padding: 1.25rem;
+            }
+
+            .project-detail .detail-images {
+                flex-direction: column;
+            }
+
+            .project-detail .detail-images .img-card {
+                flex: 1 1 auto;
+                aspect-ratio: 16 / 9;
+            }
+
+            .contact-info-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .project-detail h3 {
+                font-size: 1.35rem;
+            }
+
+            .project-detail .detail-text {
+                min-width: 100%;
+            }
+
+            .project-detail .detail-images {
+                min-width: 100%;
+            }
+
+            .contact-card {
+                padding: 1.5rem 1rem;
             }
         }
     </style>
@@ -323,6 +700,7 @@
                 <li><a href="#projects">项目</a></li>
                 <li><a href="#skills">技术栈</a></li>
                 <li><a href="#awards">荣誉</a></li>
+                <li><a href="#learning">学习历程</a></li>
                 <li><a href="#contact">联系</a></li>
             </ul>
         </div>
@@ -335,7 +713,7 @@
                 <div class="hero-content">
                     <h1>你好，我是<br><span class="highlight">蔡沛宏 (Peihong Cai)</span></h1>
                     <p>西南交通大学 通信工程 2023级本科生 | 机器人控制与强化学习爱好者。<br>
-                    热衷于让机器人在真实世界中稳定、智能地运动——从机械臂精密控制到四足机器人步态学习。</p>
+                        热衷于让机器人在真实世界中稳定、智能地运动——从机械臂精密控制到智能决策。</p>
                     <div class="hero-buttons">
                         <a href="#projects" class="btn">查看项目</a>
                         <a href="#contact" class="btn btn-outline">联系方式</a>
@@ -343,7 +721,7 @@
                 </div>
                 <div class="hero-avatar">
                     <div class="avatar-circle">
-                        <img src="image\嵌入式机械臂.png" alt="蔡沛宏" onerror="this.src='https://placehold.co/400x400?text=Photo'">
+                        <img src="images/avatar.jpg" alt="蔡沛宏" onerror="this.src='https://placehold.co/400x400?text=Photo'">
                     </div>
                 </div>
             </div>
@@ -359,7 +737,7 @@
                         <h3>RoboCon 四轴机械臂拾取系统</h3>
                         <div class="project-tags"><span class="tag">逆运动学</span><span class="tag">五次多项式</span><span class="tag">前馈补偿</span></div>
                         <div class="media-placeholder">
-                            <img src="image\RC机械臂.png" alt="机械臂演示" onerror="this.src='https://placehold.co/600x200?text=机械臂+GIF+占位'">
+                            <img src="images/arm_placeholder.jpg" alt="机械臂演示" onerror="this.src='https://placehold.co/600x200?text=机械臂+GIF+占位'">
                         </div>
                         <p>STM32H7 + 达妙电机实现四轴机械臂，末端精度≤5mm。五次多项式轨迹规划 + 三环PID + 重力前馈，支持多目标连续路径。</p>
                         <a href="#detail-arm" style="color:#2563eb; font-size:0.9rem;">查看详情 →</a>
@@ -369,7 +747,7 @@
                         <h3>四轴机械臂自动分拣系统</h3>
                         <div class="project-tags"><span class="tag">几何法逆解</span><span class="tag">OpenMV</span><span class="tag">PID调整</span></div>
                         <div class="media-placeholder">
-                            <img src="image\嵌入式机械臂.png" alt="分拣演示" onerror="this.src='https://placehold.co/600x200?text=分拣系统+演示'">
+                            <img src="images/sorting_placeholder.jpg" alt="分拣演示" onerror="this.src='https://placehold.co/600x200?text=分拣系统+演示'">
                         </div>
                         <p>废旧电池分拣，视觉引导+坐标标定补偿，吸取成功率从73%提升至91%。负责电控、部分硬件和坐标变换。</p>
                         <a href="#detail-sorting" style="color:#2563eb; font-size:0.9rem;">查看详情 →</a>
@@ -384,16 +762,6 @@
                         <p>树莓派5 + NPU加速，帧率从8fps提升至30+fps，准确率>95%。云台/底盘双环PID控制，实现动态目标锁定。</p>
                         <a href="#detail-car" style="color:#2563eb; font-size:0.9rem;">查看详情 →</a>
                     </div>
-                    <!-- 项目 4 四足机器人 -->
-                    <div class="card">
-                        <h3>四足机器人仿真研究 (进行中)</h3>
-                        <div class="project-tags"><span class="tag">MuJoCo</span><span class="tag">PPO</span><span class="tag">reward shaping</span></div>
-                        <div class="media-placeholder">
-                            <img src="images/quadruped_placeholder.jpg" alt="四足仿真" onerror="this.src='https://placehold.co/600x200?text=MuJoCo+四足仿真'">
-                        </div>
-                        <p>MuJoCo环境中使用PPO训练步态策略，完成运动学建模，正在优化reward function以抑制滑移。</p>
-                        <a href="#detail-quadruped" style="color:#2563eb; font-size:0.9rem;">查看详情 →</a>
-                    </div>
                 </div>
                 <div style="margin-top: 2rem; text-align: center;">
                     <a href="#" class="btn btn-outline">查看全部项目代码仓库</a>
@@ -406,12 +774,30 @@
             <div class="container">
                 <h2 class="section-title">🛠️ 技术栈与工具</h2>
                 <div class="skills-section">
-                    <div class="skill-category"><h3>📝 编程语言</h3><div class="skill-badge-list"><span class="skill-badge">C/C++（熟练掌握）</span><span class="skill-badge">Python（熟练掌握）</span><span class="skill-badge">Verilog（了解）</span></div></div>
-                    <div class="skill-category"><h3>🖥️ 专业软件</h3><div class="skill-badge-list"><span class="skill-badge">MATLAB</span><span class="skill-badge">立创EDA</span><span class="skill-badge">VSCode</span><span class="skill-badge">CLion</span><span class="skill-badge">Simulink</span><span class="skill-badge">Multisim</span></div></div>
-                    <div class="skill-category"><h3>⚙️ 运动控制</h3><div class="skill-badge-list"><span class="skill-badge">机械臂/底盘运动学解算</span><span class="skill-badge">PID / LQR</span><span class="skill-badge">S形曲线/五次多项式轨迹规划</span></div></div>
-                    <div class="skill-category"><h3>💻 程序开发</h3><div class="skill-badge-list"><span class="skill-badge">Linux基础</span><span class="skill-badge">ROS2 简单应用</span><span class="skill-badge">STM32 单片机编程</span><span class="skill-badge">FreeRTOS</span><span class="skill-badge">基本外设使用</span></div></div>
-                    <div class="skill-category"><h3>🧠 强化学习</h3><div class="skill-badge-list"><span class="skill-badge">PPO 算法</span><span class="skill-badge">Reward Design & Shaping</span><span class="skill-badge">Locomotion Policy 评测</span></div></div>
-                    <div class="skill-category"><h3>🤖 机器人仿真</h3><div class="skill-badge-list"><span class="skill-badge">MuJoCo 熟练使用</span><span class="skill-badge">Stable-Baselines3 环境搭建/训练调参/结果分析</span></div></div>
+                    <div class="skill-category">
+                        <h3>📝 编程语言</h3>
+                        <div class="skill-badge-list"><span class="skill-badge">C/C++（熟练掌握）</span><span class="skill-badge">Python（熟练掌握）</span><span class="skill-badge">Verilog（了解）</span></div>
+                    </div>
+                    <div class="skill-category">
+                        <h3>🖥️ 专业软件</h3>
+                        <div class="skill-badge-list"><span class="skill-badge">MATLAB</span><span class="skill-badge">立创EDA</span><span class="skill-badge">VSCode</span><span class="skill-badge">CLion</span><span class="skill-badge">Simulink</span><span class="skill-badge">Multisim</span></div>
+                    </div>
+                    <div class="skill-category">
+                        <h3>⚙️ 运动控制</h3>
+                        <div class="skill-badge-list"><span class="skill-badge">机械臂/底盘运动学解算</span><span class="skill-badge">PID / LQR</span><span class="skill-badge">S形曲线/五次多项式轨迹规划</span></div>
+                    </div>
+                    <div class="skill-category">
+                        <h3>💻 程序开发</h3>
+                        <div class="skill-badge-list"><span class="skill-badge">Linux基础</span><span class="skill-badge">ROS2 简单应用</span><span class="skill-badge">STM32 单片机编程</span><span class="skill-badge">FreeRTOS</span><span class="skill-badge">基本外设使用</span></div>
+                    </div>
+                    <div class="skill-category">
+                        <h3>🧠 强化学习</h3>
+                        <div class="skill-badge-list"><span class="skill-badge">DQN、Actor-Critic、PPO算法</span><span class="skill-badge">Reward Design & Shaping</span><span class="skill-badge">Locomotion Policy 评测</span></div>
+                    </div>
+                    <div class="skill-category">
+                        <h3>🤖 机器人仿真</h3>
+                        <div class="skill-badge-list"><span class="skill-badge">MuJoCo 熟练使用</span><span class="skill-badge">Stable-Baselines3 环境搭建/训练调参/结果分析</span></div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -425,23 +811,23 @@
                     <div class="award-item"><span class="award-name">🏅 嵌入式芯片与系统设计竞赛</span> 四川赛区二等奖</div>
                     <div class="award-item"><span class="award-name">🏅 全国大学生数学竞赛</span> 四川赛区三等奖</div>
                     <div class="award-item"><span class="award-name">🏅 蓝桥杯全国软件和信息技术大赛</span> 四川赛区二等奖</div>
-                    <div class="award-item"><span class="award-name">📚 国家励志奖学金</span> 1次</div>
-                    <div class="award-item"><span class="award-name">📚 校综合奖学金、三好学生</span> 多次</div>
-                    <div class="award-item"><span class="award-name">📜 英语六级、计算机二级优秀</span> 证书</div>
+                    <div class="award-item"><span class="award-name">📚 国家励志奖学金</span></div>
+                    <div class="award-item"><span class="award-name">📚 学校综合奖学金、三好学生</span></div>
+                    <div class="award-item"><span class="award-name">📜 英语六级、计算机二级</span></div>
                 </div>
             </div>
         </section>
 
-        <!-- 自主学习：动手学强化学习 -->
+        <!-- 目前正深入学习：《动手学强化学习》 -->
         <section>
             <div class="container">
-                <h2 class="section-title">📖 自主学习与输出</h2>
+                <h2 class="section-title">📖 目前正深入学习</h2>
                 <div class="card" style="max-width: 800px; margin: 0 auto;">
                     <div style="display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap;">
                         <i class="fas fa-book-open" style="font-size: 3rem; color:#2563eb;"></i>
                         <div>
                             <h3 style="margin-bottom: 0.5rem;">《动手学强化学习》</h3>
-                            <p style="color: #4b5563;">系统学习了强化学习核心概念与经典算法（PPO、DQN、SAC等），并基于书中框架在 MuJoCo 环境中进行策略训练与调参实践。将理论学习与机器人控制任务紧密结合，为四足机器人步态学习打下坚实基础。</p>
+                            <p style="color: #4b5563;">系统学习了强化学习核心概念与经典算法（PPO、DQN、SAC等），并基于书中框架在 MuJoCo 环境中进行策略训练与调参实践。将理论学习与机器人控制任务紧密结合，为智能决策算法落地打下坚实基础。</p>
                             <div class="project-tags" style="margin-top: 0.75rem;"><span class="tag">PPO</span><span class="tag">DQN</span><span class="tag">SAC</span><span class="tag">MuJoCo实战</span></div>
                         </div>
                     </div>
@@ -449,7 +835,34 @@
             </div>
         </section>
 
-        <!-- 项目详细介绍区域（点击后跳转到这里） -->
+        <!-- 学习历程模块 -->
+        <section id="learning">
+            <div class="container">
+                <h2 class="section-title">📈 学习历程</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">2024.09 – 2025.01</div>
+                        <div class="timeline-title">嵌入式与运动控制基础</div>
+                        <div class="timeline-desc">第一次加入实验室，开始学习接触嵌入式方向，通过校内比赛：学习了c、c++、python等语言，熟悉了stm32、TI、esp32、Arduino等开发板，学习了各种外设及通信协议，学习了PID等基础控制算法。</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">2025.02 – 2025.06</div>
+                        <div class="timeline-title">计算机视觉学习与嵌入式技能的提升</div>
+                        <div class="timeline-desc">开始参加一些更大规模的比赛，如嵌赛、光电赛等，拓展了知识面，通过OpenMV开始学习视觉算法，学习了numpy和OpenCV库，能画简单的PCB电路，接触了深度学习，掌握YOLO目标检测、Linux的基础使用、NPU加速部署，学习了正逆运动学的几何法解算机械臂和底盘。</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">2025.07 – 至今</div>
+                        <div class="timeline-title">嵌入式技能的提升与强化学习和机器人仿真的入门（进行中）</div>
+                        <div class="timeline-desc">学习了如LQR等更高阶的控制算法，学习了卡尔曼滤波等方法处理数据，学习了DH法，用矩阵形式解算机械臂。进入了RoboCon战队，练习了编写较大工程项目的能力，学习了用c++的类的方式，使代码更具可移植性。系统学习《动手学强化学习》，深入理解DQN、Actor-Critic、PPO等算法；学习使用MuJoCo仿真平台，基于Stable-Baselines3完成环境搭建、策略训练、调参与可视化分析。</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 项目详细介绍区域（图文混排优化） -->
         <section id="project-details" style="background-color: #fefefe; border-top: 2px solid #e2e8f0;">
             <div class="container">
                 <h2 class="section-title">📄 项目详细介绍</h2>
@@ -458,11 +871,25 @@
                 <div id="detail-arm" class="project-detail">
                     <h3>🤖 RoboCon 四轴机械臂拾取系统</h3>
                     <div class="detail-content">
-                        <p><strong>时间：</strong>2025.11 – 至今 &nbsp;|&nbsp; <strong>角色：</strong>核心成员（机械臂电控部分）</p>
-                        <p><strong>技术栈：</strong>STM32H7、FreeRTOS、达妙电机（FDCAN）、五次多项式轨迹规划、三环PID + 重力前馈补偿、VOFA上位机</p>
-                        <p><strong>详细实现：</strong>基于D-H参数法建立四轴机械臂模型，推导逆运动学封闭解析解（处理奇异位形并择优）。轨迹规划采用五次多项式插值，生成平滑的关节角度、角速度、角加速度，支持连续30点路径队列与即时单点模式。控制方面使用位置-速度-力矩三环PID，并叠加静力平衡前馈力矩补偿（实时计算重力矩与末端作用力矩），使末端定位误差≤5mm。通过FreeRTOS 10ms回调实现非阻塞调度，通过UART接收视觉坐标并完成坐标系变换，使用VOFA进行波形调试。此外设计了气泵驱动与一键吸取/放置功能。</p>
-                        <p><strong>难点与解决：</strong>多目标点连续轨迹下，前馈力矩计算与三环PID的时序配合问题。通过分离轨迹生成线程与实时控制线程，并加入torque-clamp安全逻辑解决。</p>
-                        <a href="#projects" class="back-link" style="color:#2563eb;">← 返回项目列表</a>
+                        <!-- 左侧文字 -->
+                        <div class="detail-text">
+                            <p><strong>时间：</strong>2025.11 – 至今 &nbsp;|&nbsp; <strong>角色：</strong>核心成员（机械臂电控部分）</p>
+                            <p><strong>技术栈：</strong>STM32H7、FreeRTOS、达妙电机（FDCAN）、五次多项式轨迹规划、三环PID + 重力前馈补偿、VOFA上位机</p>
+                            <p><strong>详细实现：</strong>基于D-H参数法建立四轴机械臂模型，推导逆运动学封闭解析解（处理奇异位形并择优）。轨迹规划采用五次多项式插值，生成平滑的关节角度、角速度、角加速度，支持连续30点路径队列与即时单点模式。控制方面使用位置-速度-力矩三环PID，并叠加静力平衡前馈力矩补偿（实时计算重力矩与末端作用力矩），使末端定位误差≤5mm。通过FreeRTOS 10ms回调实现非阻塞调度，通过UART接收视觉坐标并完成坐标系变换，使用VOFA进行波形调试。此外设计了气泵驱动与一键吸取/放置功能。</p>
+                            <p><strong>难点与解决：</strong>多目标点连续轨迹下，前馈力矩计算与三环PID的时序配合问题。通过分离轨迹生成线程与实时控制线程，并加入torque-clamp安全逻辑解决。</p>
+                            <a href="#projects" class="back-link">← 返回项目列表</a>
+                        </div>
+                        <!-- 右侧图片 -->
+                        <div class="detail-images">
+                            <div class="img-card">
+                                <img src="images/arm_detail_1.jpg" alt="机械臂整体结构" onerror="this.src='https://placehold.co/600x400?text=机械臂+整体结构'">
+                                <span class="caption">四轴机械臂整体结构</span>
+                            </div>
+                            <div class="img-card">
+                                <img src="images/arm_detail_2.jpg" alt="轨迹规划曲线" onerror="this.src='https://placehold.co/600x400?text=五次多项式+轨迹曲线'">
+                                <span class="caption">五次多项式轨迹规划曲线</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -470,10 +897,24 @@
                 <div id="detail-sorting" class="project-detail">
                     <h3>📦 四轴机械臂自动分拣系统</h3>
                     <div class="detail-content">
-                        <p><strong>时间：</strong>2025.05 – 2025.07 &nbsp;|&nbsp; <strong>角色：</strong>第一负责人（电控软件、部分硬件、视觉坐标变换）</p>
-                        <p><strong>技术栈：</strong>STM32、OpenMV、几何法逆解、PID动态调整、坐标标定补偿</p>
-                        <p><strong>详细实现：</strong>针对废旧电池分拣需求，设计视觉引导的机械臂闭环系统。OpenMV搭载自主训练的轻量分类模型，根据摄像头倾斜角校正图像，通过像素比计算深度并解算相对坐标。机械臂控制采用几何法快速解算逆解，通过定时器插值发送目标位置；将识别的位置偏差送入PID，动态修正软件目标点，使末端逐步接近并吸取。经过分区域标定+查表插值补偿，吸取成功率从73%提升至91%。</p>
-                        <a href="#projects" class="back-link" style="color:#2563eb;">← 返回项目列表</a>
+                        <!-- 左侧文字 -->
+                        <div class="detail-text">
+                            <p><strong>时间：</strong>2025.05 – 2025.07 &nbsp;|&nbsp; <strong>角色：</strong>第一负责人（电控软件、部分硬件、视觉坐标变换）</p>
+                            <p><strong>技术栈：</strong>STM32、OpenMV、几何法逆解、PID动态调整、坐标标定补偿</p>
+                            <p><strong>详细实现：</strong>针对废旧电池分拣需求，设计视觉引导的机械臂闭环系统。OpenMV搭载自主训练的轻量分类模型，根据摄像头倾斜角校正图像，通过像素比计算深度并解算相对坐标。机械臂控制采用几何法快速解算逆解，通过定时器插值发送目标位置；将识别的位置偏差送入PID，动态修正软件目标点，使末端逐步接近并吸取。经过分区域标定+查表插值补偿，吸取成功率从73%提升至91%。</p>
+                            <a href="#projects" class="back-link">← 返回项目列表</a>
+                        </div>
+                        <!-- 右侧图片 -->
+                        <div class="detail-images">
+                            <div class="img-card">
+                                <img src="images/sorting_detail_1.jpg" alt="分拣系统整体" onerror="this.src='https://placehold.co/600x400?text=分拣系统+整体视图'">
+                                <span class="caption">自动分拣系统整体视图</span>
+                            </div>
+                            <div class="img-card">
+                                <img src="images/sorting_detail_2.jpg" alt="视觉识别效果" onerror="this.src='https://placehold.co/600x400?text=OpenMV+视觉识别'">
+                                <span class="caption">OpenMV视觉识别与坐标解算</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -481,21 +922,24 @@
                 <div id="detail-car" class="project-detail">
                     <h3>🚗 智能车激光对抗系统</h3>
                     <div class="detail-content">
-                        <p><strong>时间：</strong>2025.06 – 2025.07 &nbsp;|&nbsp; <strong>角色：</strong>第一负责人（软件、视觉、控制）</p>
-                        <p><strong>技术栈：</strong>树莓派5、YOLOv8、NPU加速、步进电机云台、麦克纳姆轮底盘、双环PID</p>
-                        <p><strong>详细实现：</strong>基于YOLOv8训练目标检测模型，借助树莓派AI HAT+（NPU）推理，帧率从8fps提升至30+fps，准确率>95%。云台控制采用角度环+速度环PID；底盘进行平动+转动的逆运动学解算，同样使用角度-速度双环PID。整体实现动态目标的高精度锁定与对抗。</p>
-                        <a href="#projects" class="back-link" style="color:#2563eb;">← 返回项目列表</a>
-                    </div>
-                </div>
-
-                <!-- 项目4 详情 -->
-                <div id="detail-quadruped" class="project-detail">
-                    <h3>🐾 四足机器人仿真研究（进行中）</h3>
-                    <div class="detail-content">
-                        <p><strong>时间：</strong>2026年（SRTP预研） &nbsp;|&nbsp; <strong>角色：</strong>核心成员</p>
-                        <p><strong>技术栈：</strong>MuJoCo、PPO、Stable-Baselines3、运动学建模、reward shaping</p>
-                        <p><strong>当前进展：</strong>完成四足运动学建模（MATLAB/Simulink），在MuJoCo中搭建简易四足环境，使用PPO算法训练步态策略（基于Stable-Baselines3）。正在设计reward function以抑制横向滑移和能耗，下一步计划尝试domain randomization以提升sim-to-real迁移能力。</p>
-                        <a href="#projects" class="back-link" style="color:#2563eb;">← 返回项目列表</a>
+                        <!-- 左侧文字 -->
+                        <div class="detail-text">
+                            <p><strong>时间：</strong>2025.06 – 2025.07 &nbsp;|&nbsp; <strong>角色：</strong>第一负责人（软件、视觉、控制）</p>
+                            <p><strong>技术栈：</strong>树莓派5、YOLOv8、NPU加速、步进电机云台、麦克纳姆轮底盘、双环PID</p>
+                            <p><strong>详细实现：</strong>基于YOLOv8训练目标检测模型，借助树莓派AI HAT+（NPU）推理，帧率从8fps提升至30+fps，准确率>95%。云台控制采用角度环+速度环PID；底盘进行平动+转动的逆运动学解算，同样使用角度-速度双环PID。整体实现动态目标的高精度锁定与对抗。</p>
+                            <a href="#projects" class="back-link">← 返回项目列表</a>
+                        </div>
+                        <!-- 右侧图片 -->
+                        <div class="detail-images">
+                            <div class="img-card">
+                                <img src="images/car_detail_1.jpg" alt="智能车整体" onerror="this.src='https://placehold.co/600x400?text=智能车+整体视图'">
+                                <span class="caption">智能车激光对抗系统</span>
+                            </div>
+                            <div class="img-card">
+                                <img src="images/car_detail_2.jpg" alt="YOLO检测效果" onerror="this.src='https://placehold.co/600x400?text=YOLOv8+检测效果'">
+                                <span class="caption">YOLOv8目标检测与NPU加速效果</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -505,13 +949,68 @@
         <section id="contact">
             <div class="container">
                 <h2 class="section-title">📫 联系方式</h2>
-                <div style="background: white; border-radius: 2rem; padding: 2rem; text-align: center; box-shadow: 0 4px 6px -2px rgba(0,0,0,0.05);">
-                    <p style="margin-bottom: 1rem;"><i class="fas fa-envelope"></i> 邮箱：caipeihong@my.swjtu.edu.cn  |  备用：1700188979@qq.com</p>
-                    <p style="margin-bottom: 1.5rem;"><i class="fab fa-github"></i> GitHub：<a href="#">https://github.com/1700188979/Peihong-Cai</a> (所有项目代码)</p>
+                <div class="contact-card">
+                    <p style="margin-bottom: 1.75rem; font-size: 1.1rem; color: #4b5563;">欢迎通过以下方式与我联系，交流机器人控制与强化学习相关话题！</p>
+
+                    <!-- 联系方式网格 -->
+                    <div class="contact-info-grid">
+                        <!-- 邮箱 -->
+                        <a href="mailto:caipeihong@my.swjtu.edu.cn" class="contact-info-item">
+                            <div class="contact-icon email"><i class="fas fa-envelope"></i></div>
+                            <div>
+                                <div class="contact-label">邮箱</div>
+                                <div class="contact-value">caipeihong@my.swjtu.edu.cn</div>
+                            </div>
+                        </a>
+                        <!-- 备用邮箱 -->
+                        <a href="mailto:1700188979@qq.com" class="contact-info-item">
+                            <div class="contact-icon email"><i class="fas fa-envelope-open"></i></div>
+                            <div>
+                                <div class="contact-label">备用邮箱</div>
+                                <div class="contact-value">1700188979@qq.com</div>
+                            </div>
+                        </a>
+                        <!-- QQ -->
+                        <a href="tencent://message/?uin=1700188979" class="contact-info-item" title="点击打开QQ">
+                            <div class="contact-icon qq"><i class="fab fa-qq"></i></div>
+                            <div>
+                                <div class="contact-label">QQ</div>
+                                <div class="contact-value">1700188979</div>
+                            </div>
+                        </a>
+                        <!-- 微信 -->
+                        <div class="contact-info-item" style="cursor: default;">
+                            <div class="contact-icon wechat"><i class="fab fa-weixin"></i></div>
+                            <div>
+                                <div class="contact-label">微信</div>
+                                <div class="contact-value">c1700188979</div>
+                            </div>
+                        </div>
+                        <!-- GitHub -->
+                        <a href="https://github.com/1700188979" target="_blank" rel="noopener" class="contact-info-item">
+                            <div class="contact-icon github"><i class="fab fa-github"></i></div>
+                            <div>
+                                <div class="contact-label">GitHub</div>
+                                <div class="contact-value">github.com/1700188979</div>
+                            </div>
+                        </a>
+                        <!-- 微信二维码占位 -->
+                        <div class="contact-info-item" style="cursor: default; justify-content: center; flex-direction: column; text-align: center; gap: 0.4rem;">
+                            <div class="contact-icon qr-wechat" style="width: 80px; height: 80px; border-radius: 12px; font-size: 0.8rem; flex-direction: column; gap: 2px;">
+                                <i class="fab fa-weixin" style="font-size: 1.4rem;"></i>
+                                <span style="font-size: 0.6rem;">二维码</span>
+                            </div>
+                            <div class="contact-label">微信扫码</div>
+                            <div class="contact-value" style="font-size: 0.8rem;">扫码添加好友</div>
+                        </div>
+                    </div>
+
+                    <!-- 社交链接 -->
                     <div class="social-links">
-                        <a href="#"><i class="fab fa-github"></i></a>
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="mailto:1700188979@qq.com"><i class="fas fa-envelope"></i> 邮箱</a>
+                        <a href="tencent://message/?uin=1700188979"><i class="fab fa-qq"></i> QQ</a>
+                        <a href="#"><i class="fab fa-weixin"></i> 微信: c1700188979</a>
+                        <a href="https://github.com/1700188979" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
                     </div>
                 </div>
             </div>
@@ -521,6 +1020,11 @@
     <footer>
         <div class="container">
             <p>© 2025 蔡沛宏 · 持续构建机器人梦想 | 基于现代 web 技术</p>
+            <p class="footer-contact">
+                <span>📧 caipeihong@my.swjtu.edu.cn</span>
+                <span>🐧 QQ: 1700188979</span>
+                <span>💬 微信: c1700188979</span>
+            </p>
         </div>
     </footer>
 </body>
