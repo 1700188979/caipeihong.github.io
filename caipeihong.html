@@ -343,36 +343,47 @@
             font-weight: 600;
         }
 
-        /* 新调整：第一个项目的图片专用样式 —— 三列并排预览，无覆盖文字，视觉清晰 */
-        .project-detail .detail-images-grid {
-            flex: 1 1 480px;
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1rem;
-            align-items: start;
+        /* 第一个项目：垂直列图片布局 (按列分布) */
+        .project-detail .detail-images-vertical {
+            flex: 1 1 380px;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            min-width: 280px;
         }
-        .project-detail .detail-images-grid .img-card-simple {
+        .project-detail .detail-images-vertical .img-card-vertical {
             background: #f8fafc;
-            border-radius: 16px;
+            border-radius: 20px;
             overflow: hidden;
             border: 1px solid #e5e7eb;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
             transition: transform 0.25s, box-shadow 0.25s;
-            aspect-ratio: 16 / 10;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .project-detail .detail-images-grid .img-card-simple:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-        }
-        .project-detail .detail-images-grid .img-card-simple img {
             width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
         }
+        .project-detail .detail-images-vertical .img-card-vertical:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px -8px rgba(0, 0, 0, 0.15);
+        }
+        .project-detail .detail-images-vertical .img-card-vertical img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+            max-height: 280px;
+            width: 100%;
+        }
+        /* 为图片添加一个轻量的说明标签（可选但美观） */
+        .img-label {
+            padding: 0.6rem 1rem;
+            background: #ffffff;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: #1e293b;
+            border-top: 1px solid #edf2f7;
+            text-align: center;
+            letter-spacing: 0.3px;
+        }
+
         /* 其余项目的普通图片布局保持不变 (双列带标题) */
         .project-detail .detail-images {
             flex: 1 1 380px;
@@ -648,13 +659,9 @@
                 flex-direction: column;
                 gap: 1.5rem;
             }
-            /* 响应式：第一个项目的三列图片在平板下变为两列 */
-            .project-detail .detail-images-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            .project-detail .detail-images {
-                flex-direction: row;
-                flex-wrap: wrap;
+            .project-detail .detail-images-vertical {
+                flex-direction: column;
+                width: 100%;
             }
             .contact-info-grid {
                 grid-template-columns: 1fr 1fr;
@@ -703,11 +710,6 @@
             .repo-card {
                 width: 100%;
                 justify-content: center;
-            }
-            /* 手机屏幕下第一个项目图片三列改为单列更清晰 */
-            .project-detail .detail-images-grid {
-                grid-template-columns: 1fr;
-                gap: 0.8rem;
             }
         }
 
@@ -882,7 +884,7 @@
             <div class="container">
                 <h2 class="section-title">📄 项目详细介绍</h2>
 
-                <!-- 项目1 详情 (图片布局调整为三列并排无文字覆盖) -->
+                <!-- 项目1 详情 (图片按垂直列分布，清晰直观) -->
                 <div id="detail-arm" class="project-detail">
                     <h3>🤖 RoboCon 四轴机械臂拾取系统</h3>
                     <div class="detail-content">
@@ -896,16 +898,19 @@
                             <p><strong>💻 VSCode 代码验证：</strong>将代码移植到VSCode。对逆解函数、轨迹生成器等核心模块编写了离线测试用例，在PC端快速验证算法逻辑，减少实机调试时间。</p>
                             <a href="#projects" class="back-link">← 返回项目列表</a>
                         </div>
-                        <!-- 三列并排图片布局，清晰简洁，无额外覆盖文字 -->
-                        <div class="detail-images-grid">
-                            <div class="img-card-simple">
+                        <!-- 垂直列图片布局：三张图片按列分布，每张图片独立并带有轻量标签 -->
+                        <div class="detail-images-vertical">
+                            <div class="img-card-vertical">
                                 <img src="image/R1结构图.png" alt="机械臂整体结构" onerror="this.src='https://placehold.co/600x400?text=机械臂+整体结构'">
+                                <div class="img-label">🔧 四轴机械臂整体结构</div>
                             </div>
-                            <div class="img-card-simple">
+                            <div class="img-card-vertical">
                                 <img src="image/MATLAB截图.png" alt="MATLAB 仿真模型" onerror="this.src='https://placehold.co/600x400?text=MATLAB+机械臂仿真'">
+                                <div class="img-label">📊 MATLAB 运动学/动力学仿真</div>
                             </div>
-                            <div class="img-card-simple">
+                            <div class="img-card-vertical">
                                 <img src="image/VSCode截图.png" alt="VSCode 代码验证" onerror="this.src='https://placehold.co/600x400?text=VSCode+代码调试'">
+                                <div class="img-label">💻 VSCode 开发与单元测试</div>
                             </div>
                         </div>
                     </div>
