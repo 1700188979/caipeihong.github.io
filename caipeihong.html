@@ -343,6 +343,37 @@
             font-weight: 600;
         }
 
+        /* 新调整：第一个项目的图片专用样式 —— 三列并排预览，无覆盖文字，视觉清晰 */
+        .project-detail .detail-images-grid {
+            flex: 1 1 480px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            align-items: start;
+        }
+        .project-detail .detail-images-grid .img-card-simple {
+            background: #f8fafc;
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid #e5e7eb;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+            transition: transform 0.25s, box-shadow 0.25s;
+            aspect-ratio: 16 / 10;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .project-detail .detail-images-grid .img-card-simple:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+        .project-detail .detail-images-grid .img-card-simple img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        /* 其余项目的普通图片布局保持不变 (双列带标题) */
         .project-detail .detail-images {
             flex: 1 1 380px;
             display: flex;
@@ -351,7 +382,6 @@
             min-width: 280px;
             align-content: flex-start;
         }
-
         .project-detail .detail-images .img-card {
             flex: 1 1 calc(50% - 0.5rem);
             min-width: 140px;
@@ -367,19 +397,16 @@
             justify-content: center;
             position: relative;
         }
-
         .project-detail .detail-images .img-card:hover {
             transform: translateY(-3px);
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
         }
-
         .project-detail .detail-images .img-card img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             display: block;
         }
-
         .project-detail .detail-images .img-card .caption {
             position: absolute;
             bottom: 0;
@@ -576,21 +603,59 @@
             margin: 0 0.75rem;
         }
 
+        /* 新增仓库链接卡片样式 */
+        .repo-links {
+            margin-top: 2rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .repo-card {
+            background: white;
+            border-radius: 20px;
+            padding: 1rem 1.8rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.8rem;
+            border: 1px solid #e5e7eb;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            transition: all 0.25s ease;
+            text-decoration: none;
+            color: #1f2937;
+            font-weight: 500;
+        }
+
+        .repo-card i {
+            font-size: 1.5rem;
+            color: #2563eb;
+        }
+
+        .repo-card span {
+            font-size: 0.9rem;
+        }
+
+        .repo-card:hover {
+            transform: translateY(-3px);
+            border-color: #2563eb;
+            box-shadow: 0 10px 20px -8px rgba(0, 0, 0, 0.12);
+            background: #fafcff;
+        }
+
         @media (max-width: 900px) {
             .project-detail .detail-content {
                 flex-direction: column;
                 gap: 1.5rem;
             }
-
+            /* 响应式：第一个项目的三列图片在平板下变为两列 */
+            .project-detail .detail-images-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
             .project-detail .detail-images {
                 flex-direction: row;
                 flex-wrap: wrap;
             }
-
-            .project-detail .detail-images .img-card {
-                flex: 1 1 calc(50% - 0.5rem);
-            }
-
             .contact-info-grid {
                 grid-template-columns: 1fr 1fr;
             }
@@ -630,6 +695,19 @@
             }
             .contact-info-grid {
                 grid-template-columns: 1fr;
+            }
+            .repo-links {
+                flex-direction: column;
+                align-items: center;
+            }
+            .repo-card {
+                width: 100%;
+                justify-content: center;
+            }
+            /* 手机屏幕下第一个项目图片三列改为单列更清晰 */
+            .project-detail .detail-images-grid {
+                grid-template-columns: 1fr;
+                gap: 0.8rem;
             }
         }
 
@@ -677,44 +755,6 @@
                     <div class="avatar-circle">
                         <img src="image/个人照片.jpg" alt="蔡沛宏" onerror="this.src='https://placehold.co/400x400?text=Photo'">
                     </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="projects">
-            <div class="container">
-                <h2 class="section-title">🔨 项目精选</h2>
-                <div class="grid-2">
-                    <div class="card">
-                        <h3>RoboCon 四轴机械臂拾取系统</h3>
-                        <div class="project-tags"><span class="tag">逆运动学</span><span class="tag">五次多项式</span><span class="tag">前馈补偿</span></div>
-                        <div class="media-placeholder">
-                            <img src="image/RC机械臂.png" alt="机械臂演示" onerror="this.src='https://placehold.co/600x200?text=机械臂+GIF+占位'">
-                        </div>
-                        <p>STM32H7 + 达妙电机实现四轴机械臂，末端精度≤5mm。五次多项式轨迹规划 + 三环PID + 重力前馈，支持多目标连续路径。</p>
-                        <a href="#detail-arm" style="color:#2563eb; font-size:0.9rem;">查看详情 →</a>
-                    </div>
-                    <div class="card">
-                        <h3>四轴机械臂自动分拣系统</h3>
-                        <div class="project-tags"><span class="tag">几何法逆解</span><span class="tag">OpenMV</span><span class="tag">PID调整</span></div>
-                        <div class="media-placeholder">
-                            <img src="image/嵌入式机械臂.png" alt="分拣演示" onerror="this.src='https://placehold.co/600x200?text=分拣系统+演示'">
-                        </div>
-                        <p>废旧电池分拣，视觉引导+坐标标定补偿，吸取成功率从73%提升至91%。负责电控、部分硬件和坐标变换。</p>
-                        <a href="#detail-sorting" style="color:#2563eb; font-size:0.9rem;">查看详情 →</a>
-                    </div>
-                    <div class="card">
-                        <h3>智能车激光对抗系统</h3>
-                        <div class="project-tags"><span class="tag">YOLOv8+NPU</span><span class="tag">双环PID</span><span class="tag">逆运动学</span></div>
-                        <div class="media-placeholder">
-                            <img src="image/光电赛小车.jpg" alt="智能车" onerror="this.src='https://placehold.co/600x200?text=智能车+演示+GIF'">
-                        </div>
-                        <p>树莓派5 + NPU加速，帧率从8fps提升至30+fps，准确率>95%。云台/底盘双环PID控制，实现动态目标锁定。</p>
-                        <a href="#detail-car" style="color:#2563eb; font-size:0.9rem;">查看详情 →</a>
-                    </div>
-                </div>
-                <div style="margin-top: 2rem; text-align: center;">
-                    <a href="#" class="btn btn-outline">查看全部项目代码仓库</a>
                 </div>
             </div>
         </section>
@@ -790,12 +830,59 @@
             </div>
         </section>
 
+        <section id="projects">
+            <div class="container">
+                <h2 class="section-title">🔨 项目精选</h2>
+                <div class="grid-2">
+                    <div class="card">
+                        <h3>RoboCon 四轴机械臂拾取系统</h3>
+                        <div class="project-tags"><span class="tag">逆运动学</span><span class="tag">五次多项式</span><span class="tag">前馈补偿</span></div>
+                        <div class="media-placeholder">
+                            <img src="image/RC机械臂.png" alt="机械臂演示" onerror="this.src='https://placehold.co/600x200?text=机械臂+GIF+占位'">
+                        </div>
+                        <p>STM32H7 + 达妙电机实现四轴机械臂，末端精度≤5mm。五次多项式轨迹规划 + 三环PID + 重力前馈，支持多目标连续路径。</p>
+                        <a href="#detail-arm" style="color:#2563eb; font-size:0.9rem;">查看详情 →</a>
+                    </div>
+                    <div class="card">
+                        <h3>四轴机械臂自动分拣系统</h3>
+                        <div class="project-tags"><span class="tag">几何法逆解</span><span class="tag">OpenMV</span><span class="tag">PID调整</span></div>
+                        <div class="media-placeholder">
+                            <img src="image/嵌入式机械臂.png" alt="分拣演示" onerror="this.src='https://placehold.co/600x200?text=分拣系统+演示'">
+                        </div>
+                        <p>废旧电池分拣，视觉引导+坐标标定补偿，吸取成功率从73%提升至91%。负责电控、部分硬件和坐标变换。</p>
+                        <a href="#detail-sorting" style="color:#2563eb; font-size:0.9rem;">查看详情 →</a>
+                    </div>
+                    <div class="card">
+                        <h3>智能车激光对抗系统</h3>
+                        <div class="project-tags"><span class="tag">YOLOv8+NPU</span><span class="tag">双环PID</span><span class="tag">逆运动学</span></div>
+                        <div class="media-placeholder">
+                            <img src="image/光电赛小车.jpg" alt="智能车" onerror="this.src='https://placehold.co/600x200?text=智能车+演示+GIF'">
+                        </div>
+                        <p>树莓派5 + NPU加速，帧率从8fps提升至30+fps，准确率>95%。云台/底盘双环PID控制，实现动态目标锁定。</p>
+                        <a href="#detail-car" style="color:#2563eb; font-size:0.9rem;">查看详情 →</a>
+                    </div>
+                </div>
+                <!-- 添加 GitHub 仓库跳转链接区域 (3个项目链接) -->
+                <div class="repo-links">
+                    <a href="https://github.com/1700188979/RoboCon-RoboticArm" target="_blank" rel="noopener noreferrer" class="repo-card">
+                        <i class="fab fa-github"></i> <span>RoboCon 机械臂仓库</span> <i class="fas fa-external-link-alt" style="font-size: 0.75rem; opacity: 0.7;"></i>
+                    </a>
+                    <a href="https://github.com/1700188979/National-College-Student-Embedded-Chip-and-System-Design-Competition" target="_blank" rel="noopener noreferrer" class="repo-card">
+                        <i class="fab fa-github"></i> <span>嵌入式芯片与系统竞赛仓库</span> <i class="fas fa-external-link-alt" style="font-size: 0.75rem; opacity: 0.7;"></i>
+                    </a>
+                    <a href="https://github.com/1700188979/National-College-Students-Optoelectronic-Design-Competition" target="_blank" rel="noopener noreferrer" class="repo-card">
+                        <i class="fab fa-github"></i> <span>光电设计竞赛仓库</span> <i class="fas fa-external-link-alt" style="font-size: 0.75rem; opacity: 0.7;"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+        
         <!-- 项目详细介绍区域 -->
         <section id="project-details" style="background-color: #fefefe; border-top: 2px solid #e2e8f0;">
             <div class="container">
                 <h2 class="section-title">📄 项目详细介绍</h2>
 
-                <!-- 项目1 详情 -->
+                <!-- 项目1 详情 (图片布局调整为三列并排无文字覆盖) -->
                 <div id="detail-arm" class="project-detail">
                     <h3>🤖 RoboCon 四轴机械臂拾取系统</h3>
                     <div class="detail-content">
@@ -809,24 +896,22 @@
                             <p><strong>💻 VSCode 代码验证：</strong>将代码移植到VSCode。对逆解函数、轨迹生成器等核心模块编写了离线测试用例，在PC端快速验证算法逻辑，减少实机调试时间。</p>
                             <a href="#projects" class="back-link">← 返回项目列表</a>
                         </div>
-                        <div class="detail-images">
-                            <div class="img-card">
+                        <!-- 三列并排图片布局，清晰简洁，无额外覆盖文字 -->
+                        <div class="detail-images-grid">
+                            <div class="img-card-simple">
                                 <img src="image/R1结构图.png" alt="机械臂整体结构" onerror="this.src='https://placehold.co/600x400?text=机械臂+整体结构'">
-                                <span class="caption">四轴机械臂整体结构</span>
                             </div>
-                            <div class="img-card">
+                            <div class="img-card-simple">
                                 <img src="image/MATLAB截图.png" alt="MATLAB 仿真模型" onerror="this.src='https://placehold.co/600x400?text=MATLAB+机械臂仿真'">
-                                <span class="caption">MATLAB 运动学/动力学仿真</span>
                             </div>
-                            <div class="img-card">
+                            <div class="img-card-simple">
                                 <img src="image/VSCode截图.png" alt="VSCode 代码验证" onerror="this.src='https://placehold.co/600x400?text=VSCode+代码调试'">
-                                <span class="caption">VSCode 开发与单元测试</span>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- 项目2 详情 -->
+                <!-- 项目2 详情 (保持原有带标题样式) -->
                 <div id="detail-sorting" class="project-detail">
                     <h3>📦 四轴机械臂自动分拣系统</h3>
                     <div class="detail-content">
